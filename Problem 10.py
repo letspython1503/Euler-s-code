@@ -1,4 +1,3 @@
-import math
 def is_Prime(n):
     if n < 2:
         return False
@@ -8,13 +7,9 @@ def is_Prime(n):
             return False
         i += 1
     return True
-
-def sum_of_Primes(n1):
-    sum1 = 0
-    for i in range(1,n1+1):
-        if is_Prime(i):
-            sum1 += i
-    return sum1
-    
-z = int(input("Enter required Number: "))
-print(sum_of_Primes(z))
+n= int(input('Enter the upper limit'))
+sum1=2
+for i in range(1,n,2):
+    if is_Prime(i):
+        sum1+=i
+print(sum1)
